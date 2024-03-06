@@ -1,0 +1,115 @@
+.main {
+    background-image: url(../images/main_bg.png);
+    background-size: cover;
+    background-size: 97%;
+    background-position: 700% 50%;
+    padding-bottom: 165px;
+    background-repeat: no-repeat;
+    @include max-xxl {
+        background-position: 700% 70%;
+    }
+
+    @include max-lg {
+        background-image: none;
+        // background-image: url(../images/main_bg.png);
+        // background-size: cover;
+        // background-position: 50% -50%;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 30px;
+        margin-top: 110px;
+        @include max-xxl {
+            margin-top: 50px;
+        }
+        @include max-lg {
+            margin-top: 24px;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        max-width: 45%;
+        @include max-lg {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        & .button {
+            margin-top: 60px;
+            @include max-md{
+                margin-top: 20px;
+            }
+            
+        }
+    }
+    &_bg_mobile {
+        display: none;
+        @include max-lg {
+            display: block;
+            margin-top: -25%;
+            max-height: 100%;
+            width: calc(100vw);
+            left: 50%;
+            margin-left: -50vw;
+            position: relative;
+            object-fit: cover;
+        }
+        @include max-md {
+            margin-top: -20%;
+        }
+        @include max-sm {
+            display: block;
+            max-height: 100%;
+        }
+    }
+    &__title {
+        color: #fff;
+        &_colored {
+            background: linear-gradient(163deg, #38a5b6 11.29%, #6854f7 50.37%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    &__list {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        @include max-lg {
+            margin-top: -35%;
+        }
+        @include max-md {
+            margin-top: -35%;
+            row-gap: 16px;
+        }
+        @include max-sm {
+            margin-top: -40%;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+            color: #fff;
+            @include max-md{
+                font-size: 16px;
+                align-items: flex-start;
+            }
+            
+            & img {
+                width: 30px;
+                @include max-md{
+                    width: 20px;
+                }
+                
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+    }
+}
