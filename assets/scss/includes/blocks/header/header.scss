@@ -122,6 +122,7 @@
     width: 100%;
     @include max-lg {
         position: fixed;
+        z-index: 5;
         top: 0;
         right: -100%;
         flex-direction: column;

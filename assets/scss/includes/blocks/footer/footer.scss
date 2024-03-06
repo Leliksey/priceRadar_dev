@@ -4,6 +4,9 @@
         @include max-xxl{
             padding: 150px 0 30px;
         }
+        @include max-md{
+            padding: 0 0 30px;
+        }
         
     }
     &__top {
