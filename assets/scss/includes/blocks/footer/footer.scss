@@ -1,0 +1,125 @@
+.footer {
+    background-color: #0e1a27;
+    &__content {
+        padding: 250px 0 50px;
+        @include max-xxl{
+            padding: 150px 0 30px;
+        }
+        
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 15px;
+        @include max-md{
+            flex-direction: column;
+            row-gap: 24px;
+        }
+        
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+        max-width: 300px;
+        @include max-xxl{
+            max-width: 215px;
+        }
+        @include max-lg{
+            max-width: 190px;
+        }
+        @include max-md{
+            max-width: 500px;
+        }
+        
+        & h6, h5 {
+            color: #fff;
+        }
+        & h6 {
+            margin-top: 12px;
+            @include max-xxl{
+                margin-top: 6px;
+            }
+            @include max-lg{
+                margin-top: 0;
+            }
+            @include max-md{
+                font-size: 16px;
+                line-height: 24px;
+            }
+            
+        }
+        & h5 {
+            color: #4A5868;
+            
+        }
+        &_contacts a {
+            color: #fff;
+            font-weight: 500;
+            &:first-child {
+                margin-top: 4px;
+            }
+            &:last-child {
+                margin-top: -6px;
+            }
+        }
+        &_contacts h5 {
+            @include max-xxl{
+                font-size: 18px;
+            }
+        }
+        &_m {
+            @include max-md{
+                margin-top: -12px;
+            }
+            
+        }
+    }
+    &__logo {
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+    &__item {
+    }
+    &__link {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 24px;
+        color: #fff;
+        @include max-xxl {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        @include max-md {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    &__bottom {
+        padding: 24px 0;
+        text-align: center;
+        color: #8E8E8E;
+        border-top: 1px solid #2E3E50;
+        @include max-lg{
+            font-size: 16px;
+        }
+        
+    }
+}
+
+.social {
+    display: flex;
+    column-gap: 12px;
+    margin-top: 4px;
+    &__item {
+        width: 32px;
+        height: 32px;
+    }
+    &__link {
+    }
+    
+    
+}

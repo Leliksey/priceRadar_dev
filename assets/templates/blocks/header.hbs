@@ -1,34 +1,47 @@
 <header class="header">
     <div class="container">
         <div class="header__content">
-            <div class="logo header__logo">
+            <a href="#" class="logo header__logo">
                 <img src="images/logo.svg" alt="logo">
+            </a>
+            <div class="nav">
+                <div class="nav__heading">
+                    <a href="#" class="logo nav__logo">
+                        <img src="images/logo.svg" alt="logo">
+                    </a>
+                    <button type="button" class="close nav__close">
+                        <img src="images/close.svg" alt="close">
+                    </button>
+                </div>
+                <div class="group menu__group">
+                    <ul class="menu header__menu">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Можливості</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Тарифи</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">FAQ</a>
+                        </li>
+                    </ul>
+                    <a href="tel:+380502241829" class="header__tel"><span class="text-small">Наш номер телефону:</span>+38 050 224 18 29</a>
+                </div>
+                <div class="group">
+                    <a href="#" class="button">
+                        Увійти до кабінету
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 11L6 6L1 1" stroke="#F4F6F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="button button_fill">
+                        Зареєструватись
+                    </a>
+                </div>
             </div>
-            <div class="group">
-                <ul class="menu header__menu">
-                    <li class="menu__item">
-                        <a href="#" class="menu__link"><h6>Можливості</h6></a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link"><h6>Тарифи</h6></a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link"><h6>FAQ</h6></a>
-                    </li>
-                </ul>
-                <a href="tel:+380502241829" class="header__tel"><h6>+38 050 224 18 29</h6></a>
-            </div>
-            <div class="group">
-                <button class="login">
-                    Увійти до кабінету
-                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 11L6 6L1 1" stroke="#F4F6F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <button class="registration button_fill">
-                    Увійти до кабінету
-                </button>
-            </div>
+            <button type="button" class="burger">
+                <img src="images/burger.svg" alt="menu">
+            </button>
         </div>
     </div>
 </header>

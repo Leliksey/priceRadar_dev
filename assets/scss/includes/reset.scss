@@ -135,8 +135,13 @@ a {
 }
 button {
 	border: none;
+	outline: none;
+	background: none;
+}
+.button {
+	border: none;
 	font-size: 20px;
-	line-height: 24;
+	line-height: 24px;
 	font-weight: 500;
 	padding: 16px 20px;
 	width: max-content;
@@ -147,7 +152,28 @@ button {
 	align-items: center;
 	justify-content: center;
 	column-gap: 13px;
+	background: none;
+	@include max-xxl {
+		font-size: 18px;
+		line-height: 22px;
+		padding: 13px 15px;
+	}
+	@include max-xl{
+		font-size: 16px;
+		line-height: 20px;
+		padding: 10px;
+	}
+	
+	@include max-md {
+		font-size: 16px;
+		line-height: 20px;
+		column-gap: 12px;
+		padding: 11px 0;
+		width: 100%;
+	}
 }
+
+
 .button_fill {
 	background-color: #6854F7;
 	border: 1px solid #6854F7;
@@ -155,6 +181,14 @@ button {
 .group {
 	display: flex;
 	gap: 20px;
+	@include max-xl{
+		column-gap: 15px;
+	}
+	@include max-lg{
+		flex-direction: column;
+		width: 100%;
+	}
+	
 }
 .form-control {
 	padding: 0;
@@ -181,12 +215,23 @@ button {
 	max-width: 1920px;
 	margin: auto;
 	padding: 0 100px;
-	@include max-xl {
-		padding: 0 35px;
+	@include max-xxl {
+		padding: 0 30px;
 	}
 	@include max-md {
 		padding: 0 20px;
 	}
+}
+.mobile {
+    display: none;
+}
+@media (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
 }
 .owl-stage-outer {
 	overflow: hidden;
@@ -206,11 +251,6 @@ button {
 }
 .slick-dots {
 	display: none !important;
-}
-.custom-button {
-	background: #c17465;
-	border-radius: 5px;
-	color: #fff;
 }
 .row-rewerse {
 	flex-direction: row-reverse;
@@ -239,6 +279,10 @@ h1 {
 	font-size: 64px;
 	line-height: 64px;
 	font-weight: 700;
+	@include max-xxl{
+		font-size: 48px;
+		line-height: 54px;
+	}
 	@include max-md{
 		font-size: 28px;
 		line-height: 25px;
@@ -249,6 +293,10 @@ h2 {
 	font-size: 48px;
 	line-height: 64px;
 	font-weight: 700;
+	@include max-xxl{
+		font-size: 36px;
+		line-height: 42px;
+	}
 	@include max-md{
 		font-size: 24px;
 		line-height: 30px;
@@ -259,6 +307,10 @@ h3 {
 	font-size: 32px;
 	line-height: 29px;
 	font-weight: 700;
+	@include max-xxl{
+		font-size: 24px;
+		line-height: 30px;
+	}
 	@include max-md{
 		font-size: 16px;
 		line-height: 15px;
@@ -270,6 +322,10 @@ h4 {
 	line-height: 24px;
 	font-weight: 500;
 	@include max-md{
+		font-size: 18px;
+		line-height: 24px;
+	}
+	@include max-md{
 		font-size: 14px;
 		line-height: 18px;
 	}
@@ -280,6 +336,10 @@ h5 {
 	line-height: 24px;
 	font-weight: 400;
 	@include max-md{
+		font-size: 16px;
+		line-height: 20px;
+	}
+	@include max-md{
 		font-size: 14px;
 		line-height: 20px;
 	}
@@ -289,6 +349,10 @@ h6 {
 	font-size: 20px;
 	line-height: 24px;
 	font-weight: 300;
+	@include max-xxl{
+		font-size: 16px;
+		line-height: 20px;
+	}
 	@include max-md{
 		font-size: 14px;
 		line-height: 20px;
@@ -303,7 +367,7 @@ h6 {
 .text-small {
 	font-size: 16px;
 	line-height: 24px;
-	font-size: 300px;
+	font-weight: 300;
 	@include max-md{
 		font-size: 13px;
 		line-height: 20px;
@@ -345,4 +409,6 @@ select {
 }
 select::-ms-expand {
 	display: none;
+}
+.close {
 }

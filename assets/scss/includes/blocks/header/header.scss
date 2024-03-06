@@ -1,22 +1,55 @@
 .header {
-    background-color: #0C141D;
+    background-color: #0c141d;
     padding: 30px 0;
+    @include max-xxl {
+        padding: 25px 0;
+    }
+
     &__content {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     &__logo {
+    }
+    &__tel {
+        @include max-lg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 22px;
+        }
+        & .text-small {
+            display: none;
+            @include max-lg {
+                display: block;
+                color: #8e8e8e;
+            }
+        }
     }
     &__tel {
         font-weight: 500;
         color: #fff;
         margin-left: 10px;
+        font-size: 20px;
+        line-height: 24px;
+        @include max-xxl {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        @include max-lg {
+            margin-left: 0;
+        }
+        @include max-md {
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
     &__menu {
     }
     &__item {
     }
-    
+
     & .login {
     }
     & .registration {
@@ -24,13 +57,120 @@
 }
 .logo {
     max-width: 214px;
-    max-height: 36px;
+    display: block;
+    @include max-xxl {
+        max-width: 186px;
+    }
+    @include max-xl {
+        max-width: 160px;
+    }
 }
 .menu {
     display: flex;
     column-gap: 30px;
+    @include max-xxl {
+        column-gap: 20px;
+    }
+    @include max-xl {
+        column-gap: 15px;
+    }
+    @include max-lg {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+    }
+    @include max-lg {
+        height: 100%;
+        justify-content: center;
+    }
+
     &__link {
-        font-weight: 300;
         color: #fff;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 300;
+        @include max-xxl {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        @include max-md {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+    &__group {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        @include max-lg {
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+    }
+    & h6 {
+        @include max-lg {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    @include max-lg {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        flex-direction: column;
+        width: auto;
+        background-color: #0c141d;
+        height: 100%;
+        width: 50vw;
+        padding: 20px 20px 30px;
+        row-gap: 20px;
+        transition: 0.3s;
+    }
+    @include max-md {
+        width: 100%;
+    }
+    &.open {
+        right: 0;
+        transition: 0.3s;
+    }
+    &__close {
+        display: none;
+        @include max-lg {
+            display: block;
+            margin: 0 0 0 auto;
+        }
+    }
+    & .button {
+        @include max-lg {
+            width: 100%;
+        }
+    }
+
+    &__heading {
+        display: none;
+        justify-content: space-between;
+        width: 100%;
+        @include max-lg {
+            display: flex;
+        }
+    }
+    &__logo {
+        display: none;
+        @include max-md {
+            display: block;
+        }
+    }
+}
+.burger {
+    display: none;
+    @include max-lg {
+        display: block;
     }
 }
