@@ -1,0 +1,95 @@
+.help {
+    padding: 250px 0 0;
+    @include max-md{
+        padding: 200px 0 0;
+    }
+    
+    &__content {
+        & h2 {
+            color: #fff;
+            text-align: center;
+            @include max-md{
+                text-align: left;
+            }
+            
+        }
+    }
+    &__grid {
+        margin-top: 48px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 28px;
+        column-gap: 29px;
+        @include max-xxl{
+            grid-template-columns: 1fr 1fr;
+        }
+        @include max-md{
+            margin-top: 24px;
+            grid-template-columns: 1fr;
+            row-gap: 10px;
+        }
+        
+        &-item {
+            display: flex;
+            align-items: flex-start;
+            column-gap: 20px;
+            background: #448FFF4D;
+            padding: 30px 16px;
+            border-radius: 12px;
+            @include max-xxl{
+                column-gap: 15px;
+            }
+            @include max-md{
+                padding: 16px 14px;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 10px;
+            }
+            
+            &:first-child {
+                background: #448FFF87;
+                width: 100%;
+                grid-column-start: 1;
+                grid-column-end: 4;
+                @include max-xxl{
+                    grid-column-end: 3; 
+                }
+                @include max-md{
+                    grid-column-end: 1; 
+                }
+                
+            }
+            & img {
+                width: 46px;
+                height: 46px;
+                @include max-xxl{
+                    width: 36px;
+                    height: 36px;
+                }
+                
+            }
+            & h3 {
+                color: #fff;
+                @include max-md{
+                    text-align: center;
+                }
+                
+            }
+            & .h6 {
+                color: #fff;
+                @include max-md{
+                    text-align: center;
+                }
+            }
+        }
+        &-group {
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+            @include max-md{
+                row-gap: 10px;
+            }
+            
+        }
+    }
+}

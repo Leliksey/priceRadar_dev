@@ -93,35 +93,92 @@
     // background: linear-gradient(90deg, rgba(104, 84, 247, 0.78) 0%, rgba(56, 165, 182, 0.78) 96%),
     // linear-gradient(0deg, rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.36));
     background-image: url(../images/gradient_bg.png);
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     padding: 42px 0;
     border-radius: 24px;
-    bottom: -200px;
+    margin-top: 0;
+    bottom: -150px;
+    @include max-md {
+        flex-direction: column;
+        margin-top: -50px;
+        padding: 0 20px 20px;
+        width: calc(100vw);
+        left: 50%;
+        margin-left: -50vw;
+        position: relative;
+        background-image: url(../images/gradient_bg_mobile.png);
+    }
+
     & img {
         position: absolute;
         left: 0;
         top: -40px;
         max-width: 659px;
+        @include max-xxl {
+            max-width: 580px;
+        }
+        @include max-xl {
+            left: -50px;
+            max-width: 520px;
+        }
+        @include max-lg {
+            max-width: 435px;
+            bottom: 0;
+            margin: auto;
+        }
+        @include max-md {
+            position: relative;
+            left: 0;
+            margin-top: 0;
+        }
     }
     &__info {
         display: flex;
         flex-direction: column;
         row-gap: 30px;
-        margin-left: 30%;
-        max-width: 694px;
+        margin-left: 40%;
+        max-width: 40%;
+        @include max-xxl {
+            row-gap: 25px;
+        }
+        @include max-lg {
+            row-gap: 20px;
+            margin-left: 45%;
+        }
+        @include max-md {
+            max-width: 100%;
+            margin-left: 0;
+        }
     }
     &__title {
         font-size: 36px;
         font-weight: 800;
         line-height: 48px;
         color: #fff;
+        @include max-xxl {
+            font-size: 28px;
+            line-height: 34px;
+        }
+        @include max-lg {
+            font-size: 24px;
+            line-height: 30px;
+        }
     }
     &__desc {
         font-size: 20px;
         font-weight: 400;
         line-height: 24px;
         color: #fff;
+        @include max-xxl {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        @include max-lg {
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
     & .button_fill {
     }
