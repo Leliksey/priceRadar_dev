@@ -10,11 +10,6 @@
         @include max-md{
             row-gap: 12px;
         }
-        
-        & h2 {
-        }
-        & p {
-        }
         & .h5 {
             font-weight: 500;
         }
@@ -118,16 +113,9 @@
         &-head {
             display: flex;
             align-items: center;
-            @include max-lg{
-                // justify-content: center;
-            }
             @include max-md{
                 padding-bottom: 6px;
                 border-bottom: 1px solid #F6F6F6;
-            }
-            
-            @include max-sm{
-                // justify-content: start;
             }
             
         }

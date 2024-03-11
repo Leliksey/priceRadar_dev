@@ -131,8 +131,6 @@ a {
 	text-decoration: none;
 	text-transform: initial;
 	color: unset;
-	&:focus {
-	}
 }
 button {
 	border: none;
@@ -191,27 +189,6 @@ button {
 	}
 	
 }
-.form-control {
-	padding: 0;
-}
-.hide {
-	display: none !important;
-}
-.d__block {
-	display: block !important;
-}
-.d__flex {
-	display: flex !important;
-}
-.revert {
-	transform: rotateZ(180deg);
-}
-.revert45 {
-	transform: rotateZ(45deg);
-}
-.revert180 {
-	transform: rotateZ(180deg);
-}
 .container {
 	max-width: 1920px;
 	margin: auto;
@@ -239,7 +216,6 @@ button {
 }
 .owl-stage {
 	display: flex;
-	// align-items: center;
 }
 .owl-nav {
 	display: none;
@@ -247,34 +223,9 @@ button {
 .owl-dots {
 	display: none;
 }
-.slick-arrow {
-	display: none !important;
-}
-.slick-dots {
-	display: none !important;
-}
-.row-rewerse {
-	flex-direction: row-reverse;
-}
-.opacity0 {
-	opacity: 0;
-}
-.catalog__active {
-	margin-top: 11px !important;
-}
 ::-webkit-scrollbar {
 	width: 0px;
 	background: rgba(255, 255, 255, 0);
-}
-.sectionTitle {
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 42px;
-	color: #555555;
-	@include max-md {
-		font-size: 24px;
-		line-height: 28px;
-	}
 }
 h1 {
 	font-size: 64px;
@@ -360,11 +311,6 @@ h6, .h6 {
 	}
 	
 }
-// .text {
-// 	font-size: 36px;
-// 	line-height: 48px;
-// 	font-size: 800px;
-// }
 .text-small {
 	font-size: 16px;
 	line-height: 24px;
@@ -396,20 +342,10 @@ h6, .h6 {
 .fw-900 {
 	font-weight: 900;
 }
-.btn__next {
-	width: 13px;
-	position: absolute;
-	right: 30px;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-}
 select {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
 select::-ms-expand {
 	display: none;
-}
-.close {
 }
