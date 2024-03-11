@@ -34,5 +34,9 @@ $(document).ready(function() {
     $(".tariff__options-select").click(function() {
         $(this).toggleClass("year");
     });
+    $(".faq__list-item").click(function() {
+        $(this).toggleClass("open");
+        $(this).find("p").slideToggle();
+    });
 });
  
