@@ -42,12 +42,15 @@
             border: none;
             width: 72px;
             height: 33px;
+            cursor: pointer;
             @include max-md{
                 width: 63px;
                 height: 28px;
                 padding: 5px 6px;
             }
-            
+            &.year {
+                background-color: #6854F7;
+            }
             &::before {
                 content: "";
                 width: 21px;

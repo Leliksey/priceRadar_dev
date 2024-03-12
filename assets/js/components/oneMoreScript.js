@@ -36,7 +36,7 @@ $(document).ready(function() {
     });
     $(".faq__list-item").click(function() {
         $(this).toggleClass("open");
-        $(this).find("p").slideToggle();
+        $(this).find("p").slideToggle(); 
     });
 });
  

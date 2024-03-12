@@ -219,6 +219,9 @@ button {
 }
 .owl-nav {
 	display: none;
+	& button {
+		cursor: pointer;
+	}
 }
 .owl-dots {
 	display: none;
